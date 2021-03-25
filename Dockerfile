@@ -7,7 +7,8 @@ ADD trackers-list-aria2.sh /root/aria2/trackers-list-aria2.sh
 ADD run.sh /root/cloudreve/run.sh
 
 RUN apt-get update \
-    && apt-get install wget curl aria2 -y
+    && apt-get install wget curl -y
+#aria2 -y
 
 RUN wget -qO cloudreve.tar.gz https://github.com/cloudreve/Cloudreve/releases/download/3.1.1/cloudreve_3.1.1_linux_amd64.tar.gz \
     && wget -qO /root/aria2/dht.dat https://github.com/P3TERX/aria2.conf/raw/master/dht.dat \
